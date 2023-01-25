@@ -13,16 +13,16 @@ export default function HomePage() {
         </div>
       </nav>
       <div className="pt-56 sm:pt-60 md:pt-64 lg:pt-72 xl:pt-72">
-        <h1 className="flex justify-between text-3xl md:text-4xl">
-          <span className="text-white">
+        <h1 className="flex flex-col justify-between text-3xl md:flex-row md:text-4xl">
+          <span className="leading-relaxed text-white">
             The best way to predict the future is to{" "}
-            <span className="rounded-sm bg-blue-500/20 px-4 py-1.5 font-mono">
+            <span className="rounded-sm bg-blue-500/20 px-2 py-1 font-mono">
               create
               <span className="text-white/10">::</span>
               it;
             </span>
           </span>
-          <span className="text-white/50">{`— Abraham Lincoln`}</span>
+          <span className="mt-2 text-white/50 md:mt-0">{`— Abraham Lincoln`}</span>
         </h1>
       </div>
       <section>
@@ -34,6 +34,10 @@ export default function HomePage() {
             description="Run to win. Ori is a competitive game played outdoors."
             href="https://orirun.com"
             imageSrc="/ori2.png"
+            imageAlign={{
+              horizontal: "left",
+              vertical: "top",
+            }}
           />
           <PortfolioItem
             dark
@@ -41,7 +45,7 @@ export default function HomePage() {
             title="Wikishirts"
             description="Turn any Wikipedia article into a cool shirt that you can wear."
             href="https://wikishirts.io"
-            imageSrc="/wikishirts.avif"
+            imageSrc="/wikishirts2.png"
           />
           <PortfolioItem
             dark
@@ -49,15 +53,11 @@ export default function HomePage() {
             title="Rewardist"
             description="Cafe loyalty cards out of your wallet and into your phone."
             href="https://rewardist.io"
-            imageSrc="/rewardist.png"
-          />
-          <PortfolioItem
-            dark={false}
-            span={1}
-            title="Desko"
-            description="Office space management for the hybrid work era."
-            href="https://desko.io"
-            imageSrc="/desko.png"
+            imageSrc="/rewardist2.png"
+            imageAlign={{
+              horizontal: "right",
+              vertical: "top",
+            }}
           />
           <PortfolioItem
             dark
@@ -66,6 +66,14 @@ export default function HomePage() {
             description="Unity3D game sharing and testing."
             href="https://cheesegames.net"
             imageSrc="/cheesegames.png"
+          />
+          <PortfolioItem
+            dark={false}
+            span={1}
+            title="Desko"
+            description="Office space management for the hybrid work era."
+            href="https://desko.io"
+            imageSrc="/desko.png"
           />
           <PortfolioItem
             dark

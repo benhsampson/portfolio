@@ -7,6 +7,10 @@ interface Props extends Omit<HTMLMotionProps<"a">, "children"> {
   title: string;
   description: string;
   imageSrc: string;
+  imageAlign?: {
+    horizontal: "left" | "right";
+    vertical: "top" | "bottom";
+  };
   action?: string;
   dark?: boolean;
   span?: 1 | 2 | 3;
@@ -17,6 +21,7 @@ export const PortfolioItem = ({
   description,
   imageSrc,
   action,
+  imageAlign,
   dark = true,
   span = 1,
   ...props
@@ -42,7 +47,10 @@ export const PortfolioItem = ({
         src={imageSrc}
         alt={title}
         fill
-        className="object-cover object-top"
+        className={clsx(
+          "object-cover",
+          imageAlign && `object-${imageAlign.horizontal}-${imageAlign.vertical}`
+        )}
         quality={100}
       />
     </div>
